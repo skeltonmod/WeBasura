@@ -1,0 +1,26 @@
+  video {
+    float: left;
+    width: 811px;
+    height: 456px;
+  }
+  h4 {
+    text-transform: uppercase;
+    font-family: verdana;
+    color: #313131;
+    font-size: 35px;
+  }
+  h5{
+    color: #000000;
+    text-transform: none;
+    font-family: verdana;
+    font-size: 20px;
+    text-align: justify;
+  }
+
+  @media screen and (max-width:900px){
+    #pageintro h4 {text-align: center;text-transform: uppercase;font-family: verdana;color: #313131;font-size: 20px;}
+    #pageintro h5{color: #000000; text-transform: none; font-family: verdana; font-size: 15px; text-align: justify;}
+    video { width: 250px;height: 100%; margin-left: -10px; margin-bottom: 15px;}
+
+  }
+  

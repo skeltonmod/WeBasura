@@ -1,0 +1,25 @@
+/* Map
+--------------------------------------------------------------------------------------------------------------- */
+.map-container-6{
+    overflow:hidden;
+    position:relative;
+    height: 50%;
+    }
+.map-container-6 iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    padding: 10px 10px 10px 10px;
+    position:absolute;
+    }
+    
+    ul.a {
+        list-style-position: inherit;
+        column-count: 2;
+        line-height: normal;
+        text-transform: none;
+        font-size: 20px;
+        text-align: justify;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+       }

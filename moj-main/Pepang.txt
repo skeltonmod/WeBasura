@@ -1,0 +1,30 @@
+<table class="row">
+                      <tr>
+                        <td><b>No.</b></td>
+                        <td><b>Requirements</b></td>
+                        <td><b>Purpose</b></td>
+                      </tr>
+                      <?php
+                        $sql = 'SELECT * FROM tbl_requirements ORDER BY Purpose, Req_No';
+                        $result = mysqli_query($conn, $sql);
+                        $tbl_requirements = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                        foreach($tbl_requirements as $table_infos){
+                        ?>
+                        <div class="col s6 md3">
+                            <div class="card-content center">
+                              <tr>
+                                <td><?php echo htmlspecialchars($table_infos['Req_No']);?></td>
+                                <td><?php echo htmlspecialchars($table_infos['Requirements']);?></td>
+                                <td><?php echo htmlspecialchars($table_infos['Purpose']);?></td>
+                                <td>
+                                  <td><a href="listreq.php?Req=<?php echo $table_infos['Requirements'];?>&Pur=<?php echo $table_infos['Purpose'];?>"><input type="button" value="update" class="btn btn-info"></a></td>
+                                  <td><a href="Config/delete.php?Req=<?php echo $table_infos['Requirements'];?>&Pur=<?php echo $table_infos['Purpose'];?>"><input type="button" value="Delete" class="btn btn-danger"></a></td>
+                                </td>
+                              </tr>
+                            </div>
+                        </div>
+                      <?php  }
+                      mysqli_free_result($result);
+                      mysqli_close($conn);
+                      ?>
+                    </table>
